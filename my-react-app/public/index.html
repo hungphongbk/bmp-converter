@@ -39,8 +39,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
     <script>
             let gapiInited = false;
       /**
@@ -56,10 +54,12 @@
        */
       async function initializeGapiClient() {
         await gapi.client.init({
-          apiKey: REACT_APP_API_KEY
+          apiKey: %REACT_APP_API_KEY%
         });
         gapiInited = true;
       }
     </script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
   </body>
 </html>
