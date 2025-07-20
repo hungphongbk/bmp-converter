@@ -12,7 +12,7 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "^/api/(.*)",   "dest": "/api/drive.py" },
-    { "src": "^/static/(.*)", "dest": "/static/$1" },
-    { "src": "/(.*)",         "dest": "/index.html" }
+    { "src": "^/static/(.*)", "dest": "/my-react-app/static/$1" },
+    { "src": "/(.*)",         "dest": "/my-react-app/index.html" }
   ]
 }
