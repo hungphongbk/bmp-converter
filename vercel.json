@@ -6,11 +6,8 @@
     { "src": "my-react-app/package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
-    // 1) Phục vụ file tĩnh có sẵn (build folder) trước
     { "handle": "filesystem" },
-    // 2) Các API requests
     { "src": "/api/(.*)", "dest": "api/drive.py" },
-    // 3) Client‐side routing: mọi URL khác về index.html
     { "src": "/(.*)",     "dest": "my-react-app/build/index.html" }
   ]
 }
